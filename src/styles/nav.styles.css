@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    padding-top: 10px;
+    margin-left: 5%;
+
+}
+
+.header img {
+    width: 60px;
+    height: 60px
+}
+
+.logo {
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+}
+
+.green {
+    color: green;
+}
+
+nav.navigation {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+}
+
+nav.navigation ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav.navigation ul li {
+    transition: background-color 0.5s ease;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+nav.navigation ul li:hover {
+    background-color: green;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+nav.navigation ul li:hover a {
+    color: yellow;
+}
+
+nav.navigation ul li a {
+    text-decoration: none;
+    color: green;
+}
