@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import MainPage from './components/Page/MainPage';
 import './App.css';
 
 import AppRouter from './AppRouter';
@@ -10,7 +10,6 @@ class App extends Component {
         <header >          
             <AppRouter/>          
         </header>
-
       </div>
     );
   }
