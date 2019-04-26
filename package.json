@@ -24,6 +24,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "firebase": "^5.10.1",
     "node-sass": "^4.11.0",
     "react-animated-slider": "^1.1.4"
   }

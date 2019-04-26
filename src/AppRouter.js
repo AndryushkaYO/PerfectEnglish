@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import About from './components/about/about';
 import Home from './components/home/home';
@@ -7,8 +7,42 @@ import Profile from './components/profile/profile';
 import Quiz from './components/quiz/quiz';
 import logo from './img/logo.png'
 import './styles/nav.styles.css'
+import { auth, provider } from './services/firebase';
 
-function AppRouter() {
+class AppRouter extends Component {
+  constructor() {
+    super();
+    this.login = this.login.bind(this); 
+    this.logout = this.logout.bind(this);
+    this.state = {
+      user : null
+    }
+  }
+  login() {
+    auth.signInWithPopup(provider) 
+      .then((result) => {
+        const user = result.user;
+        this.setState({
+          user
+        });
+      });
+  }
+  logout() {
+    auth.signOut()
+      .then(() => {
+        this.setState({
+          user: null
+        });
+      });
+  }
+  componentDidMount() {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ user });
+      } 
+    });
+  } 
+  render() {
     return (
         <Router>
     <div>
@@ -36,6 +70,16 @@ function AppRouter() {
             <li>
               <Link to="/profile/">My Profile</Link>
             </li>
+            {
+              this.state.user ?
+              <li>
+                <Link to="/" onClick={this.logout}>Log Out</Link>
+              </li>               
+              : 
+              <li>
+                <Link to="/profile/" onClick={this.login}>Log In</Link> 
+              </li>            
+            }
           </ul>
         </nav>
 							</div>
@@ -47,6 +91,7 @@ function AppRouter() {
       </div>
     </Router>
     );
+  }  
 }
 
 export default AppRouter;
