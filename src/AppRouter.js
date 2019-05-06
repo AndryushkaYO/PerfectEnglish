@@ -7,41 +7,21 @@ import Profile from './components/profile/profile';
 import Quiz from './components/quiz/quiz';
 import logo from './img/logo.png'
 import './styles/nav.styles.css'
-import { auth, provider } from './services/firebase';
+import {login, logout, onAuthStateChanged} from './services/authentication';
 
 class AppRouter extends Component {
   constructor() {
     super();
-    this.login = this.login.bind(this); 
-    this.logout = this.logout.bind(this);
     this.state = {
-      user : null
+      user : sessionStorage.getItem('isUser')
     }
   }
-  login() {
-    auth.signInWithPopup(provider) 
-      .then((result) => {
-        const user = result.user;
-        this.setState({
-          user
-        });
-      });
-  }
-  logout() {
-    auth.signOut()
-      .then(() => {
-        this.setState({
-          user: null
-        });
-      });
-  }
+  
   componentDidMount() {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        this.setState({ user });
-      } 
-    });
-  } 
+    onAuthStateChanged(this);
+    
+  }
+
   render() {
     return (
         <Router>
@@ -71,13 +51,13 @@ class AppRouter extends Component {
               <Link to="/profile/">My Profile</Link>
             </li>
             {
-              this.state.user ?
+              this.state.user !== 'null' ?
               <li>
-                <Link to="/" onClick={this.logout}>Log Out</Link>
+                <Link to="/" onClick={logout}>Log Out</Link>
               </li>               
               : 
               <li>
-                <Link to="/profile/" onClick={this.login}>Log In</Link> 
+                <Link to="/profile/" onClick={login}>Log In</Link> 
               </li>            
             }
           </ul>
