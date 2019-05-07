@@ -11,8 +11,9 @@ import './styles/nav.styles.css'
 function AppRouter() {
     return (
         <Router>
-    <div>
-      <div className="header">
+        <div>
+    <div className="Path-597">
+      <div className="header ">
       <div className="logo">
       		<img src={logo} alt="logo"/>
       		<span>Perfect</span>	
@@ -38,6 +39,7 @@ function AppRouter() {
             </li>
           </ul>
         </nav>
+        </div>
 							</div>
         <Route path="/" exact component={Home}/>
         <Route path="/gallery/" component={Gallery} /> 
