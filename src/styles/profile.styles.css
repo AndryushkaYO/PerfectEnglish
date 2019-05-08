@@ -10,15 +10,7 @@ h1{
 a:hover{
 	cursor: pointer;
 }
-.flexR{
-		
-		position: absolute;
-		width: 100vw;
-		margin-left: auto;
-		margin-right: auto;
-	display: flex;
-	justify-content: space-around;
-}
+
 .flexC{
 		height: 80vh;
 	display: flex;
@@ -48,4 +40,38 @@ align-items: center;
      position:absolute;
   bottom:8%;
   right:40%;
+}
+.head-green{
+  height: 22%;
+  background-image: linear-gradient(to right, #118f5c, #96f833);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-bottom: 25%;
+}
+.modal-logo{
+  width:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  
+}
+.ico{
+  width:50px;
+  object-fit: contain;
+  padding-top: 15px;
+}
+.flex{
+  display:flex; 
+  flex-direction:column;
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex h2{
+text-align: center;
+}
+.flex  div p{
+  display: inline;
+  
 }
