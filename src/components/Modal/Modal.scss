@@ -1,0 +1,105 @@
+.quiz {
+
+  .quiz__start-button {
+    background-color: #89d528;
+
+    &:hover {
+      background-color: #79bb23;
+    }
+  }
+}
+
+.modal__header {
+  position: relative;
+  top: -20px;
+  left: -40px;
+  width: 120%;
+  height: 50px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+  background-color: #f1f1f1;
+
+  .modal__header-title {
+    width: 245px;
+    display: flex;
+    align-items: center;
+    font-family: 'SegoeUI', sans-serif;
+    font-size: 1.5em;
+    color: #004945;
+  }
+}
+
+.modal__quiz-container {
+  position: relative;
+  /* TODO height? something wrong? how know? */
+  height: 240px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+  background-color: #67d440;
+
+  .modal__quiz-header {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+    background-color: #4ebf49;
+    color: #ffffff;
+    font-family: 'SegoeUI', sans-serif;
+    font-size: 1.3em;
+
+    .modal__quiz-question-count {
+      padding-right: 10px;
+    }
+  }
+
+  .modal__quiz-content {
+
+    .modal__quiz-question {
+      display: flex;
+      justify-content: center;
+      color: #ffffff;
+      font-family: 'SegoeUI', sans-serif;
+      font-size: 1.2em;
+    }
+
+    .modal__quiz-answers {
+      display: flex;
+      justify-content: center;
+
+      .modal__quiz-answer-button {
+        margin-right: 10px;
+        background-color: #ffffff;
+        color: #004945;
+        transition: all 0.5s ease 5ms;
+
+        &:hover {
+          background-color: #4ebf49;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  /* TODO edit */
+  .modal__quiz-next-button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border: none;
+    background-color: #67d440;
+    color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+}
+
+.modal__horizontal-line {
+  width: 100%;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
+}
