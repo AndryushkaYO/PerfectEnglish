@@ -1,0 +1,77 @@
+.profile-bg{
+height: 95vh; 
+    background: url('../img/profile/bg.png') 100% 100% no-repeat; 
+    background-size: cover;
+    margin-top: -150px;
+}
+h1{
+	margin:0;
+}
+a:hover{
+	cursor: pointer;
+}
+
+.flexC{
+		height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+align-items: center;
+}
+.profile{
+	 width: 26%;
+  position: absolute;
+  object-fit: contain;
+  position:absolute;
+  top:12%;
+  left:21%;
+}
+.prizes{
+	 width: 22%; 
+  object-fit: contain;
+  position:absolute;
+  top:11%;
+  right:23%;
+}
+
+.achievements{
+	 width: 18%;
+    object-fit: contain;
+     position:absolute;
+  bottom:8%;
+  right:40%;
+}
+.head-green{
+  height: 22%;
+  background-image: linear-gradient(to right, #118f5c, #96f833);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-bottom: 25%;
+}
+.modal-logo{
+  width:50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  
+}
+.ico{
+  width:50px;
+  object-fit: contain;
+  padding-top: 15px;
+}
+.flex{
+  display:flex; 
+  flex-direction:column;
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex h2{
+text-align: center;
+}
+.flex  div p{
+  display: inline;
+  
+}
