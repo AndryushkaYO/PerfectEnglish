@@ -47,12 +47,7 @@ function getModalStyle() {
 class SimpleModal extends React.Component {
   constructor(props) {
     super(props);
-
     this.quizQuestion = React.createRef();
-
-    this.setText = text => {
-      this.quizQuestion.current.textContent = text;
-    }
   }
 
   rightQuestions = 0;
@@ -79,6 +74,10 @@ class SimpleModal extends React.Component {
 
   handleClose = () => {
     this.setState({open: false});
+  };
+
+  setText = text => {
+    this.quizQuestion.current.textContent = text;
   };
 
   checkQuestion = (e) => {
