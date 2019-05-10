@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import About from './components/about/about';
 import Home from './components/home/home';
 import Gallery from './components/gallery/gallery';
@@ -7,7 +7,10 @@ import Profile from './components/profile/profile';
 import Quiz from './components/quiz/quiz';
 import logo from './img/logo.png'
 import './styles/nav.styles.css'
-import {login, logout, onAuthStateChanged} from './services/authentication';
+import {onAuthStateChanged } from './components/firebase';
+import SignUp from './components/authentication/SignUp';
+import SignIn from './components/authentication/SignIn';
+import SignOut from './components/authentication/SignOut';
 
 class AppRouter extends Component {
   constructor() {
@@ -51,14 +54,19 @@ class AppRouter extends Component {
               <Link to="/profile/">My Profile</Link>
             </li>
             {
-              this.state.user !== 'null' ?
+              this.state.user === "null" ?
+              <React.Fragment>
               <li>
-                <Link to="/" onClick={logout}>Log Out</Link>
-              </li>               
+                <Link to="/sign-up/">Sign Up</Link>
+              </li>
+              <li>
+                <Link to="/sign-in/">Sign In</Link>
+              </li>
+              </React.Fragment>            
               : 
               <li>
-                <Link to="/profile/" onClick={login}>Log In</Link> 
-              </li>            
+                <Link to="/sign-out/" > Sign Out</Link>  
+              </li>           
             }
           </ul>
         </nav>
@@ -67,11 +75,22 @@ class AppRouter extends Component {
         <Route path="/gallery/" component={Gallery} /> 
         <Route path="/about/" component={About} /> 
         <Route path="/quiz/" component={Quiz} />        
-        <Route path="/profile/" component={Profile} />
+        <PrivateRoute exact path="/profile/" component={Profile} />
+        <Route exact path="/sign-up/" component={SignUp} />
+        <Route exact path="/sign-in/" component={SignIn} />
+        <Route exact path="/sign-out/" component={SignOut} />
       </div>
     </Router>
     );
   }  
 }
+
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route {...rest} render={(props) => (
+    sessionStorage.getItem('isUser') !== 'null'
+      ? <Component {...props} />
+      : <Redirect to="/sign-in/" />
+  )} />
+)
 
 export default AppRouter;
