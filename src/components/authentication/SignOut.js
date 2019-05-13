@@ -1,27 +1,30 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { State } from 'react-powerplug';
 import { auth } from '../firebase';
-import { BrowserRouter as Redirect } from "react-router-dom";
 
 class SignOut extends React.Component {
-    signOut = () => {
-      auth.doSignOut()
-        .then(response => {
-          console.log('successfully signed out', response);
-          sessionStorage.setItem('isUser', null);
-          
-        })
-        .catch(err => {
-          console.log('failed to sign out', err);
-        });
-    };
-  
-    componentDidMount() {
-      this.signOut();
-    }
-  
-    render() {
-      return <Redirect to='/' />;
-    }
+  handleSignOut = () => {
+    return auth
+     .doSignOut()
+            .then(response => {
+              console.log('successfully signed out', response);
+              sessionStorage.removeItem('isUser');
+              this.props.history.push('/');
+              
+            })
+            .catch(err => {
+              console.log('failed to sign out', err);
+            });
+  };
+
+  render() {
+    return (
+      <State>
+        {this.handleSignOut()}
+      </State>
+    );
+  }
 }
 
-export default SignOut;
+export default withRouter(SignOut);

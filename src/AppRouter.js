@@ -54,7 +54,7 @@ class AppRouter extends Component {
               <Link to="/profile/">My Profile</Link>
             </li>
             {
-              this.state.user === "null" ?
+              !this.state.user  ?
               <React.Fragment>
               <li>
                 <Link to="/sign-up/">Sign Up</Link>
