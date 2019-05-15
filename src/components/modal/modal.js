@@ -52,7 +52,40 @@ let data = [{
   answerA: 'No',
   answerB: 'Yes',
   answerC: 'Yes'
-}];
+},{
+  questionID: '3',
+    typeID: '2',
+    url: 'https://www.youtube.com/watch?v=lTTajzrSkCw',
+    question: `Which emotion did rabbit feel in the end of the video? `,
+    rightAnswer: 'WTF!?',
+    answerA: 'happiness',
+    answerB: 'joyness',
+    answerC: 'pleasure'
+  },
+  {
+    questionID: '4',
+    typeID: '3',
+    url: 'http://basicenglishspeaking.com/wp-content/uploads/2016/audio/100/098-04.mp3',
+    question: `Please write what you've heard in the audio.`,
+    rightAnswer: 'You are not to take photos in the museum'
+  },{
+    questionID: '5',
+    typeID: '3',
+    url: 'http://basicenglishspeaking.com/wp-content/uploads/2016/audio/100/095-03.mp3',
+    question: `Please write what you've heard in the audio.`,
+    rightAnswer: 'Whether or not we like it, we have to accept it'
+  },
+  {
+    questionID: '6',
+    typeID: '2',
+    url: 'https://www.youtube.com/watch?v=NWTRQFLk2Ew',
+    question: `Where were the keys? `,
+    rightAnswer: 'In the door',
+    answerA: 'At the table',
+    answerB: 'In the garden',
+    answerC: 'Don\'t know'
+  }
+];
 
 let rightQuestions = 0;
 
