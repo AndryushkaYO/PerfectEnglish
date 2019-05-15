@@ -5,7 +5,6 @@ import Home from './components/home/home';
 import Gallery from './components/gallery/gallery';
 import Profile from './components/profile/profile';
 import Quiz from './components/quiz/quiz';
-import logo from './img/logo.png'
 import './styles/nav.styles.css'
 
 function AppRouter() {
@@ -15,7 +14,7 @@ function AppRouter() {
     <div className="Path-597">
       <div className="header ">
       <div className="logo">
-      		<img src={logo} alt="logo"/>
+      		{/*<img src={logo} alt="logo"/>*/}
       		<span>Perfect</span>	
       		<span className="green">ENGLISH</span>
       		
@@ -44,7 +43,7 @@ function AppRouter() {
         <Route path="/" exact component={Home}/>
         <Route path="/gallery/" component={Gallery} /> 
         <Route path="/about/" component={About} /> 
-        <Route path="/quiz/" component={Quiz} />        
+        <Route path="/quiz/" component={Quiz} />
         <Route path="/profile/" component={Profile} />
       </div>
     </Router>
