@@ -87,7 +87,7 @@ class AppRouter extends Component {
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={(props) => (
-    sessionStorage.getItem('isUser') !== 'null'
+    sessionStorage.getItem('isUser') !== null
       ? <Component {...props} />
       : <Redirect to="/sign-in/" />
   )} />
