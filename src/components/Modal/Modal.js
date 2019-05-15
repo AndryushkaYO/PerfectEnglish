@@ -10,8 +10,8 @@ import './Modal.scss';
 const styles = theme => ({
   paper: {
     position: 'absolute',
-    width: theme.spacing.unit * 50,
-    height: '350px',
+    width: theme.spacing.unit * 70,
+    height: '450px',
     borderRadius: '5px',
     backgroundColor: '#ffffff',
     boxShadow: theme.shadows[5],
@@ -19,15 +19,15 @@ const styles = theme => ({
     outline: 'none',
   },
   modalHeaderBlock1: {
-    width: '90px',
+    width: '100px',
     backgroundColor: '#67d440'
   },
   modalHeaderBlock2: {
-    width: '70px',
+    width: '80px',
     backgroundColor: '#4ebf49'
   },
   modalHeaderBlock3: {
-    width: '20px',
+    width: '30px',
     borderRadius: '0 5px 5px 0',
     backgroundColor: '#87ec37'
   }
@@ -61,7 +61,25 @@ class SimpleModal extends React.Component {
     answerA: 'brake',
     answerB: 'broke',
     answerC: 'broken'
-  }];
+  },
+  {
+    questionID: '2',
+    typeID: '2',
+    url: 'https://www.youtube.com/watch?v=lTTajzrSkCw',
+    question: `Which emotion did rabbit feel in the end of the video? `,
+    rightAnswer: 'WTF!?',
+    answerA: 'happiness',
+    answerB: 'joyness',
+    answerC: 'pleasure'
+  },
+  {
+    questionID: '3',
+    typeID: '3',
+    url: 'http://basicenglishspeaking.com/wp-content/uploads/2016/audio/100/096-02.mp3',
+    question: `Please write what you've heard in the audio. (Don't forget about question sign in rhe end of ypur answer)`,
+    rightAnswer: 'Why don’t you go ask the teacher?'
+  }
+];
 
   state = {
     open: false,

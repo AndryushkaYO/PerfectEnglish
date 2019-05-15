@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import About from './components/about/about';
-import Home from './components/home/home';
+import MainPage from './components/Page/MainPage';
 import Gallery from './components/gallery/gallery';
 import Profile from './components/profile/profile';
-import Quiz from './components/quiz/quiz';
+import QuizPage from './components/Page/QuizPage/QuizPage';
 import logo from './img/logo.png'
 import './styles/nav.styles.css'
 
@@ -16,9 +16,9 @@ function AppRouter() {
       <div className="header ">
       <div className="logo">
       		<img src={logo} alt="logo"/>
-      		<span>Perfect</span>	
+      		<span>Perfect</span>
       		<span className="green">ENGLISH</span>
-      		
+
       		</div>
         <nav className="navigation">
           <ul>
@@ -41,10 +41,10 @@ function AppRouter() {
         </nav>
         </div>
 							</div>
-        <Route path="/" exact component={Home}/>
-        <Route path="/gallery/" component={Gallery} /> 
-        <Route path="/about/" component={About} /> 
-        <Route path="/quiz/" component={Quiz} />        
+        <Route path="/" exact component={MainPage}/>
+        <Route path="/gallery/" component={Gallery} />
+        <Route path="/about/" component={About} />
+        <Route path="/quiz/" component={QuizPage} />
         <Route path="/profile/" component={Profile} />
       </div>
     </Router>
