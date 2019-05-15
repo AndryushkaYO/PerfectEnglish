@@ -4,9 +4,9 @@ import About from './components/about/about';
 import MainPage from './components/Page/MainPage';
 import Gallery from './components/gallery/gallery';
 import Profile from './components/profile/profile';
-import QuizPage from './components/Page/QuizPage/QuizPage';
-import logo from './img/logo.png'
-import './styles/nav.styles.css'
+import Quiz from './components/quiz/quiz';
+import logo from './img/logo.png';
+import './styles/nav.styles.css';
 
 function AppRouter() {
     return (
@@ -44,7 +44,7 @@ function AppRouter() {
         <Route path="/" exact component={MainPage}/>
         <Route path="/gallery/" component={Gallery} />
         <Route path="/about/" component={About} />
-        <Route path="/quiz/" component={QuizPage} />
+        <Route path="/quiz/" component={Quiz} />
         <Route path="/profile/" component={Profile} />
       </div>
     </Router>

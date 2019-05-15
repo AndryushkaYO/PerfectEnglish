@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Modal from './../../Modal/Modal';
+import Modal from '../../Modal/modal';
 
-import './QuizPage.scss';
+//import './QuizPage.scss';
 import Header from '../../Header/Header';
 import Footer from "../../Footer/Footer";
 
