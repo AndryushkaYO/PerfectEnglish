@@ -76,7 +76,7 @@ class AppRouter extends Component {
         </nav>
         </div>
 							</div>
-        <Route path="/" exact component={Home}/>
+        <Route path="/" exact component={MainPage}/>
         <Route path="/gallery/" component={Gallery} /> 
         <Route path="/about/" component={About} /> 
         <Route path="/quiz/" component={Quiz} />        
