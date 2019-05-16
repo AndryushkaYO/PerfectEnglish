@@ -7,9 +7,13 @@
     "react": "^16.8.6",
     "react-audio-player": "^0.11.0",
     "react-dom": "^16.8.6",
+    "react-grid-gallery": "^0.5.4",
+    "react-image-gallery": "^0.8.16",
+    "react-lightbox-component": "^1.2.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
     "redux": "^4.0.1",
+    "shuffle-array": "^1.0.1",
     "video-react": "^0.13.7"
   },
   "scripts": {
