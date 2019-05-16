@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import Modal from '../Modal/modal';
+import Modal from '../../Modal/modal';
 
-import './quiz.scss';
-import Footer from "../Footer/Footer";
+//import './QuizPage.scss';
+import Header from '../../Header/Header';
+import Footer from "../../Footer/Footer";
 
 
-class Quiz extends Component {
+class QuizPage extends Component {
   render() {
     return <div>
+      <Header/>
       <Introduce/>
       <Footer/>
     </div>
@@ -31,4 +33,4 @@ function Introduce() {
   </div>
 }
 
-export default Quiz;
+export default QuizPage;

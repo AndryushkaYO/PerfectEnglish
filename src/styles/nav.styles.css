@@ -6,6 +6,12 @@
     margin-left: 5%;
 
 }
+.Path-597 {
+ color: white;
+ border-bottom-left-radius: 40px;
+ border-bottom-right-radius: 40px;
+  background-image: linear-gradient(264deg, #118f5c, #96f833);
+}
 
 .header img {
     width: 60px;
@@ -49,8 +55,11 @@ nav.navigation ul li:hover {
 nav.navigation ul li:hover a {
     color: yellow;
 }
-
+nav.navigation ul li a:active{
+color: yellow;
+}
 nav.navigation ul li a {
     text-decoration: none;
-    color: green;
+    color: white;
+    font-weight: 600;
 }

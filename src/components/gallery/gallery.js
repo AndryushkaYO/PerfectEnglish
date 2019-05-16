@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+//import "../../../node_modules/video-react/styles/scss";
 
 class Gallery extends Component {
     render() {
-        return (<h1>Gallery Page</h1>);
+        return (
+        <div >
+            <h1>Gallery Page</h1>
+
+          </div>);
     }
 }
 
