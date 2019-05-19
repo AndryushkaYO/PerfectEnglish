@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Modal from '../Modal/modal';
+import Modal from '../modal/modal';
 
 import './quiz.scss';
-import Footer from "../Footer/Footer";
+import Footer from "../footer/footer";
 
 
 class Quiz extends Component {

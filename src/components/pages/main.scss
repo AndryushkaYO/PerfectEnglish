@@ -1,5 +1,5 @@
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'SegoeUI', sans-serif;
 }
 
 p {
@@ -25,12 +25,21 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    height: 500px;
 
     .main__why-block {
       width: 300px;
       padding: 25px;
+
+      h2 {
+        margin-bottom: 5px;
+      }
     }
   }
+}
+
+.main__start-quiz {
+  margin-bottom: 30px;
 }
 
 .main__title-with-paragraph {
@@ -50,5 +59,9 @@ p {
 }
 
 .test {
-  padding: 25px 0;
+  margin-bottom: 30px;
+}
+
+.slide {
+  padding-top: 50px;
 }
