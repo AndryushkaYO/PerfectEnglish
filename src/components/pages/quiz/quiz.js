@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Modal from '../../Modal/modal';
 
-//import './QuizPage.scss';
+//import './quiz.scss';
 import Header from '../../Header/Header';
-import Footer from "../../Footer/Footer";
+import Footer from "../../footer/footer";
 
 
-class QuizPage extends Component {
+class Quiz extends Component {
   render() {
     return <div>
       <Header/>
@@ -33,4 +33,4 @@ function Introduce() {
   </div>
 }
 
-export default QuizPage;
+export default Quiz;

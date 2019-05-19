@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import About from './components/about/about';
-import MainPage from './components/Page/MainPage';
+import MainPage from './components/pages/main';
 import Gallery from './components/gallery/gallery';
 import Profile from './components/profile/profile';
 import Quiz from './components/quiz/quiz';

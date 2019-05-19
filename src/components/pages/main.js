@@ -1,34 +1,29 @@
 import React, { Component } from 'react';
-import './MainPage.scss';
-
-import Header from '../Header/Header'
-import Footer from '../Footer/Footer'
-
-// Slider component
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 
+import Footer from '../footer/footer'
+import './main.scss';
+
 const content = [
   {
-    title: 'Слайд 1',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-    button: 'Більше',
-    image: ''
+    title: '',
+    description: '',
+    button: '',
+    image: 'https://i.imgur.com/fTcXkyL.jpg'
   },
   {
     title: 'Слайд 2',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-    button: 'Більше',
+    description: 'Опис слайду.',
+    button: '',
     image: ''
   }
 ];
 
-class MainPage extends Component {
+class Main extends Component {
   render() {
     return (
       <div className={'main-page'}>
-        <Header/>
-
         <Slider>
           {content.map((item, index) => (
             <div
@@ -63,7 +58,7 @@ class MainPage extends Component {
             </div>
           </div>
 
-          <div>
+          <div className={'main__start-quiz'}>
             <TitleWithParagraph title={'Не знаєш який в тебе рівень знань?'}
                                 paragraph={'Пройди тест та визнач свій рівень англійської за 5 хв.'}/>
             <button className={'main__button'}>Пройти</button>
@@ -112,4 +107,4 @@ function TitleWithParagraph(props) {
   </div>;
 }
 
-export default MainPage;
+export default Main;

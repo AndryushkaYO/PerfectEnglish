@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MainPage from './components/Page/MainPage';
 import './App.css';
 import AppRouter from './AppRouter';
 
