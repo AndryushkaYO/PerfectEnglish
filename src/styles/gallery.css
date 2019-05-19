@@ -1,0 +1,24 @@
+#gallery{
+    padding-top: 50px;
+    width:55%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.girl, .boy{
+height: 70%;
+position: absolute;
+bottom: 100px;
+}
+.girl{
+
+left:100px;
+}
+.boy{
+
+    right:100px;
+}
+#bg{
+    height: 100vh;
+    background:url('../img/gallery/bg.jpg') 100% 100% no-repeat;
+    background-size: cover;
+}
