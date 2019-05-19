@@ -13,7 +13,7 @@
   position: relative;
   top: -20px;
   left: -40px;
-  width: 120%;
+  width: 640px;
   height: 50px;
   margin-bottom: 30px;
   display: flex;
@@ -51,15 +51,16 @@
     font-family: 'SegoeUI', sans-serif;
     font-size: 1.3em;
 
-    .modal__quiz-question-count {
+    #modal__quiz-question-count {
       padding-right: 10px;
     }
   }
 
   .modal__quiz-content {
+    text-align: center;
 
     .modal__quiz-question {
-      padding-top: 10%;
+      padding-top: 20px;
       padding-bottom: 3%;
       display: flex;
       justify-content: center;
@@ -69,14 +70,16 @@
     }
 
     .modal__quiz-answers {
-      padding-top: 3%;
+      padding-top: 15px;
       display: flex;
       justify-content: center;
 
       .modal__quiz-answer-button {
-        margin-right: 10px;
+        margin: 10px;
         background-color: #ffffff;
         color: #004945;
+        font-size: .8em;
+        line-height: 1.4em;
         transition: all 0.5s ease 5ms;
 
         &:hover {
@@ -105,4 +108,21 @@
   border: 0;
   height: 2px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0));
+}
+
+.quiz-result {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  color: #ffffff;
+  font-family: 'SegoeUI', sans-serif;
+  font-size: 1.2em;
+
+  .quiz-result__title {
+
+  }
 }
