@@ -85,11 +85,7 @@ class AppRouter extends Component {
         <Route exact path="/sign-in/" component={SignIn} />
         <Route exact path="/sign-out/" component={SignOut} />
 
-        <Route path="/" exact component={MainPage}/>
-        <Route path="/gallery/" component={Gallery} />
-        <Route path="/about/" component={About} />
-        <Route path="/quiz/" component={Quiz} />
-        <Route path="/profile/" component={Profile} />
+       
       </div>
     </Router>
     );

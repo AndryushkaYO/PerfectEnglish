@@ -53,7 +53,7 @@ class SimpleModal extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>       
+      <div>
         <a onClick={this.handleOpen}>
         <img src={ProfileLogo} className="profile"/>
         </a>
@@ -68,12 +68,12 @@ class SimpleModal extends React.Component {
            <img src={ProfileLogo} className="modal-logo"/>
            </div>
            <div className="flex">
-            <h2>Alice Larson</h2>
-            <div> <img src={ProfileLogo1} className="ico"/> <p>AGE</p></div>
-            <div> <img src={ProfileLogo2} className="ico"/> <p>PHONE</p></div>  
-            <div> <img src={ProfileLogo2} className="ico"/> <p>EMAIL</p></div>          
+            <h2>Pumpkin</h2>
+            <div> <img src={ProfileLogo1} className="ico"/> <p>20</p></div>
+            <div> <img src={ProfileLogo2} className="ico"/> <p>PHONE</p></div>
+            <div> <img src={ProfileLogo2} className="ico"/> <p>pumpkin@gmail.com</p></div>
             </div>
-           
+
           </div>
         </Modal>
       </div>

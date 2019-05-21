@@ -1,6 +1,6 @@
 .profile-bg{
-height: 95vh; 
-    background: url('../img/profile/bg.png') 100% 100% no-repeat; 
+height: 95vh;
+    background: url('../img/profile/bg.png') 100% 100% no-repeat;
     background-size: cover;
     margin-top: -150px;
 }
@@ -27,7 +27,7 @@ align-items: center;
   left:21%;
 }
 .prizes{
-	 width: 22%; 
+	 width: 22%;
   object-fit: contain;
   position:absolute;
   top:11%;
@@ -54,7 +54,7 @@ align-items: center;
   margin-left: auto;
   margin-right: auto;
   object-fit: contain;
-  
+
 }
 .ico{
   width:50px;
@@ -62,7 +62,7 @@ align-items: center;
   padding-top: 15px;
 }
 .flex{
-  display:flex; 
+  display:flex;
   flex-direction:column;
   width:60%;
   margin-left: auto;
@@ -73,5 +73,7 @@ text-align: center;
 }
 .flex  div p{
   display: inline;
-  
+  font-size: 25px;
+  padding-left: 20px;
+  padding-bottom: 10px;
 }

@@ -3,7 +3,7 @@ import Modal from '../modal/modal';
 
 import './quiz.scss';
 import Footer from "../footer/footer";
-
+import QuizLogo from '../../img/quiz/quiz.png';
 
 class Quiz extends Component {
   render() {
@@ -23,7 +23,7 @@ function Introduce() {
         <p className={'introduce__paragraph'}>Під час тесту вам буде запропоновано 20 запитань – уважно читайте та думайте, перш ніж відповісти. Після кожного запитання вам потрібно вказати рівень впевненості у відповіді.</p>
         <p className={'introduce__paragraph'}>Коли ви закінчите тест, ви дізнаєтеся свій приблизний рівень англійської мови. Потім ви можете знайти матеріали на веб-сайті за рівнем або за тематикою.</p>
       </div>
-
+      <img src={QuizLogo} className="logoQ"/>
       <Modal className={'introduce__button'} open={false}>
         some
       </Modal>

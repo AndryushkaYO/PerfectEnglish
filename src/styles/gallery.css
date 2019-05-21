@@ -4,7 +4,7 @@
     margin-left: auto;
     margin-right: auto;
 }
-.girl, .boy{
+.girl, .boy, .girl1, .boy1{
 height: 70%;
 position: absolute;
 bottom: 100px;
@@ -22,3 +22,12 @@ left:100px;
     background:url('../img/gallery/bg.jpg') 100% 100% no-repeat;
     background-size: cover;
 }
+
+    .girl1{
+z-index: -1000;
+    left:10px;
+    }
+    .boy1{
+        z-index: -1000;
+        right:10px;
+    }

@@ -54,7 +54,7 @@ class SimpleModal extends React.Component {
     const { classes } = this.props;
 
     return (
-      <div>       
+      <div>
         <a onClick={this.handleOpen}>
         <img src={AchievementsLogo} className="achievements"/>
         </a>
@@ -69,12 +69,12 @@ class SimpleModal extends React.Component {
            <img src={AchievementsLogo} className="modal-logo"/>
            </div>
            <div className="flex">
-            
-            <div> <img src={AchievementsLogo1} className="ico"/> <p>LOREM</p></div>
-            <div> <img src={AchievementsLogo2} className="ico"/> <p>LOREM</p></div>     
-            <div> <img src={AchievementsLogo3} className="ico"/> <p>LOREM</p></div>            
+
+            <div> <img src={AchievementsLogo1} className="ico"/> <p>7 / 20</p></div>
+            <div> <img src={AchievementsLogo2} className="ico"/> <p>11 / 30</p></div>
+            <div> <img src={AchievementsLogo3} className="ico"/> <p>21 / 50</p></div>
             </div>
-            
+
           </div>
         </Modal>
       </div>
