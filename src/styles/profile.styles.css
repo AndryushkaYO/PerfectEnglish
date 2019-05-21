@@ -73,5 +73,6 @@ text-align: center;
 }
 .flex  div p{
   display: inline;
+  font-size:25px;
   
 }

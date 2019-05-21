@@ -22,10 +22,10 @@ class AppRouter extends Component {
       user : sessionStorage.getItem('isUser')
     }
   }
-  
+
   componentDidMount() {
     onAuthStateChanged(this);
-    
+
   }
 
   render() {
@@ -66,34 +66,30 @@ class AppRouter extends Component {
               <li>
                 <Link to="/sign-in/">Sign In</Link>
               </li>
-              </React.Fragment>            
-              : 
+              </React.Fragment>
+              :
               <li>
-                <Link to="/sign-out/" > Sign Out</Link>  
-              </li>           
+                <Link to="/sign-out/" > Sign Out</Link>
+              </li>
             }
           </ul>
         </nav>
         </div>
 							</div>
         <Route path="/" exact component={MainPage}/>
-        <Route path="/gallery/" component={Gallery} /> 
-        <Route path="/about/" component={About} /> 
-        <Route path="/quiz/" component={Quiz} />        
+        <Route path="/gallery/" component={Gallery} />
+        <Route path="/about/" component={About} />
+        <Route path="/quiz/" component={Quiz} />
         <PrivateRoute exact path="/profile/" component={Profile} />
         <Route exact path="/sign-up/" component={SignUp} />
         <Route exact path="/sign-in/" component={SignIn} />
         <Route exact path="/sign-out/" component={SignOut} />
 
-        <Route path="/" exact component={MainPage}/>
-        <Route path="/gallery/" component={Gallery} />
-        <Route path="/about/" component={About} />
-        <Route path="/quiz/" component={Quiz} />
-        <Route path="/profile/" component={Profile} />
+
       </div>
     </Router>
     );
-  }  
+  }
 }
 
 
